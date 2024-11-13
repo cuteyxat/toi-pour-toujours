@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <title>Cutey` Profile</title>
+<!DOCTYPE html>
+
+<head>
+  <div class="sky">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+<p class="line-1 anim-typewriter">à toi pour toujours... si tu le dis `</p>
+
+</html>
+</head>
+<style>
+.sky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #270730;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #eee;
+  animation: falling-stars linear infinite;
+}
+
+@keyframes falling-stars {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+}
+
+.star:nth-child(1) {
+  top: -10px;
+  left: 20%;
+  animation-duration: 2s;
+}
+
+.star:nth-child(2) {
+  top: -20px;
+  left: 40%;
+  animation-duration: 3s;
+}
+
+.star:nth-child(3) {
+  top: -30px;
+  left: 60%;
+  animation-duration: 4s;
+}
+
+.star:nth-child(4) {
+  top: -40px;
+  left: 80%;
+  animation-duration: 5s;
+}
+
+.star:nth-child(5) {
+  top: -50px;
+  left: 90%;
+  animation-duration: 6s;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 4em;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;  
+  background-color: rgb(25,25,25);  
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 80%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(56) 1s 1 normal both,
+             blinkTextCursor 500ms steps(56) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 21em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+</style>
